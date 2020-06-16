@@ -1,0 +1,25 @@
+TIDY NUMBERS
+
+Tatiana likes to keep her things tidy. She likes to sort her toys from smallest to largest, her pencils from shortest to longest and her computers from oldest to newest. One day, while she was practicing her counting skills, she noticed that some integers, when written in base 10 with no leading zeroes, have their digits sorted in non-decreasing order. Some examples of this are 8, 123, 555, and 224488. She decided to call these numbers tidy. Numbers that do not have this property, like 20, 321, 495 and 999990, are not tidy.
+We need to find the last tidy number she counted after she finished counting all positive integers in ascending order from 1 to N. 
+
+Solution:
+
+We start by reading T number of test cases. Then we create an array for number of digits a[t][]. The length of each number is defined by the integer length[t].
+
+We create a while loop for every 't' case under the  condition that 'i' be less than 't' with i being initialized to 0. We enter the input number 'n'. To retrieve the number of digits from 'n' we divide it by 10 and assign that value to integer 'r'. 
+We create another while loop inside with the condition that 'd' be less than 'r' with 'd' being equal to 1. Each time this loop runs 'd' is multiplied by 10.
+We create another while loop which runs till 'd' is equal to 0. In this loop we retrieve every digit and assign them into the integer array.
+Every time this loop runs 'd' is divided by 10 and 'length[i]' is incremented.
+At the end of the while loop 'i' is incremented.
+
+Now we create a while loop to check if the digits are in non-decreasing order for each case. We compare each digit with the next to check if its in non decreasing order. If not, then we decrement the current digit and we assign 9 to the rest of the array digits. The loop repeats itself until the array is in ascending order.
+
+Now we create a while loop to display the tidy numbers and another while loop within to avoid displaying if the number consists of 0.
+
+Hence, this is how you get the closest tidy number possible.
+
+   
+
+
+

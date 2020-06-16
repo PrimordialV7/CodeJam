@@ -1,0 +1,34 @@
+OVERSIZED PANCAKE FLIPPER
+
+To start with a brief explanation of my understanding of the problem. A Pancake restaurant had come up with a happy face pancake
+and with the opposite side the blank side.
+As a Head cook I needed to ensure that all the customers got the happy side up pancakes served to them.All the pancakes were
+in a single row, and I was given an oversized flipper which can turn only K number of pancakes at a time. 
+In the K number of pancakes if any of them were blank side up they would be flipped to happy side and vice versa.
+And Also, the flipper should only flip if there are K Number of pancakes ,it should not flip if there K-1 pancakes.
+The Input is given with T number of test cases,and each test case has a string S representing the Happy or blank side of pancakes
+with '+' and '-' respectively followed by the size of flipper K
+
+Solution:
+
+First we get the number of test cases T and we declare pancake strings for T cases.
+We also declare the Flipper size K a counter C for number of flips and M for Impossible case. 
+We start a loop for T cases and get the inputs i.e the pancake string S and flipper size K for all the T cases.
+We start another for loop for T cases and initialize the counter for number of flips.Then we make a nested for loop for each pancake in the string.
+Then we check for a pancake being '-' and and also if the flipper has K number of pancakes on it.
+We make another loop to flip K pancakes at once. We scan the the string for '-' to make it '+'.
+After every flip the counter increments.
+After the first flip we check in the same test case and the same string for a '-' and that the flipper is full or not, 
+and if there are any '-' it flips K number of pancakes and the counter increments again.
+And once its done with the first test case it goes on to the second test case and so on.
+
+After all the iterations are done, to check the results for Impossible cases we create a for loop for T cases.
+and a nested for loop for every pancake in a string in each case and we check for a blank side in each array '-'.
+If we encounter a '-' we increment the counter for Impossible condition M or else it continues checking.
+We finally create a for loop to display the result of each case. We check the Impossible counter M for each case if it is greater than 0 the we display impossible 
+else we display the number given by counter C.
+
+Hence we get all the possible outcomes for the input test cases.
+
+  
+ 
